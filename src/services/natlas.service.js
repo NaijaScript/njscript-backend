@@ -15,7 +15,7 @@ export async function generateDraft({
 You are a professional writer fluent in Yoruba, Igbo, Hausa, and English.
 
 Task:
-Write a ${type} in ${language}.
+Write a ${type}  in ${language}. Ensure you write in logical and cohesive paragraphs
 
 Rules:
 - Output strictly in ${language}
