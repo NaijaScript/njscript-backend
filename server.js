@@ -5,6 +5,7 @@ import cors from "cors";
 import generateRoute from "./src/routes/generate.js";
 import autocompleteRoute from "./src/routes/autocomplete.js";
 import editRoute from "./src/routes/edit.js";
+import audioRoute from "./src/routes/audio.js";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use("/api/generate", generateRoute);
 app.use("/api/edit", editRoute);
 app.use("/api/autocomplete", autocompleteRoute);
+app.use("/api/audio", audioRoute);
 
 app.get("/", (req, res) => {
   res.send("API is running");
@@ -28,6 +30,9 @@ app.get("/api/edit", (req, res) => {
 });
 app.get("/api/autocomplete", (req, res) => {
   res.send("Autocomplete is running");
+});
+app.get("/api/audio", (req, res) => {
+  res.send("Audio service is running");
 });
 
 // ✅ Use Render's injected PORT
