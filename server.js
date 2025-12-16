@@ -17,6 +17,10 @@ app.use("/api/generate", generateRoute);
 app.use("/api/edit", editRoute);
 app.use("/api/autocomplete", autocompleteRoute);
 
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 // ✅ Use Render's injected PORT
 const PORT = process.env.PORT || 4000;
 
