@@ -9,13 +9,13 @@ const client = new OpenAI({
 export async function generateDraft({
     prompt,
     language,
-    mode,
+    type,
 }) {
     const systemPrompt = `
 You are a professional writer fluent in Yoruba, Igbo, Hausa, and English.
 
 Task:
-Write a ${mode} in ${language}.
+Write a ${type} in ${language}.
 
 Rules:
 - Output strictly in ${language}

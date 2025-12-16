@@ -10,18 +10,18 @@ router.post("/", async (req, res) => {
         });
     }
     try {
-        const { prompt, language, mode } = req.body;
+        const { prompt, language, type } = req.body;
 
-        if (!prompt || !language || !mode) {
+        if (!prompt || !language || !type) {
             return res.status(400).json({
-                error: "prompt, language, and mode are required",
+                error: "prompt, language, and type are required",
             });
         }
 
         const text = await generateDraft({
             prompt,
             language,
-            mode,
+            type,
         });
 
         res.json({ text });
